@@ -20,7 +20,7 @@ var randomPassword = "";
 // Amount of Characters
 function generatePassword() {
   var confirmLength = (prompt("How many total characters would you like in your password?"));
-  for(confirmLength <= 7; confirmLength >= 51;) {
+  for(confirmLength <= 7; confirmLength >= 128;) {
     alert("Password length must be at least 8 and no more than 128");
     var confirmLength = (prompt("How many total characters would you like in your password?"));
     }

@@ -1,93 +1,80 @@
-# 03 JavaScript: Password Generator
+# Random Password generator
 
-## Your Task
+## Website Description
 
-This week’s homework requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+This Website allows the user to create a random password with the characters you would like to include.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+## Getting Started
 
-## User Story
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+### Prerequisites
 
-## Acceptance Criteria
+What things you need to install the software and how to install them
 
 ```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+Github and Gitlab accounts
+GitBash or Terminal
 ```
 
-## Mock-Up
+### Installing
 
-The following image shows the web application's appearance and functionality:
+A step by step series of examples that tell you how to get a development env running
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+```
+Clone the code to your terminal
+Pull from the repository
+View on Visual Studio Code
+```
 
-## Grading Requirements
+## Built With
 
-This homework is graded based on the following criteria: 
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://www.javascript.com/)
 
-### Technical Acceptance Criteria: 40%
+## Deployed Link
 
-* Satisfies all of the above acceptance criteria plus the following:
+* [See Live Site](https://hudsonmbarnes.github.io/password/)
 
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
+## What I did
 
-### Deployment: 32%
+I created and declared all of the variables. I think prompted the user to imput the amount of characters they would like. The user can then choose if they would like lowercase, uppercase, numbers, or special characters in their random password. The function will check for the users imput and randomize using math.random.
 
-* Application deployed at live URL.
+## Code Snippet
 
-* Application loads with no errors.
+This part of the code is where the user would confirm its characters and if the user chose cancel for all the alerts, it will say "you must choose at least one option" and reset the alerts.
 
-* Application GitHub URL submitted.
+```
+// Determine characters
+  var confirmLower = confirm("Would you like to use lowercase letters");
+  var confirmUpper = confirm("Would you like to use uppercase letters");
+  var confirmNumeric = confirm("Would you like to use numbers?");
+  var confirmSpecial = confirm("Would you like to use special characters?");
+    while(confirmLower === false && confirmUpper === false && confirmNumeric === false && confirmSpecial ===false) {
+      alert("You must choose at least one option!");
+        var confirmLower = confirm("Would you like to use lowercase letters");
+        var confirmUpper = confirm("Would you like to use uppercase letters");
+        var confirmNumeric = confirm("Would you like to use numbers?");
+        var confirmSpecial = confirm("Would you like to use special characters?"); 
+    }
 
-* GitHub repository that contains application code.
+```
 
-### Application Quality: 15%
+## Editors
 
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+* **Hudson Barnes**
+- [Link to Github](https://github.com/hudsonmbarnes)
+- [Link to LinkedIn](https://www.linkedin.com/in/hudson-barnes-398483151/) 
 
 
-## Review
+## Authors
 
-You are required to submit the following for review:
+* **Hudson Barnes** 
 
-* The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Acknowledgments
 
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+* W3schools.com
+* stackoverflow.com
+* google.com
