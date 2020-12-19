@@ -13,6 +13,7 @@ var confirmLower;
 var confirmUpper;
 var confirmNumeric;
 var confirmSpecial;
+var passwordCharacters = [];
 
 // Amount of Characters
 function generatePassword() {
@@ -33,6 +34,20 @@ function generatePassword() {
         var confirmUpper = confirm("Would you like to use uppercase letters");
         var confirmNumeric = confirm("Would you like to use numbers?");
         var confirmSpecial = confirm("Would you like to use special characters?"); 
+    }
+  
+    // Assign characters to password (found the concat online, not sure if it works or theres another way of doing this)
+    if (confirmLower) {
+      passwordCharacters = passwordCharacters.concat(lower)
+    }
+    if (confirmUpper) {
+      passwordCharacters = passwordCharacters.concat(upper)
+    }
+    if (confirmNumeric) {
+      passwordCharacters = passwordCharacters.concat(numeric)
+    }
+    if (confirmSpecial) {
+      passwordCharacters = passwordCharacters.concat(special)
     }
   
   
