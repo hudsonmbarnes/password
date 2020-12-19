@@ -39,7 +39,6 @@ function generatePassword() {
     }
   
     // Assign characters to password (found the concat online, not sure if it works or theres another way of doing this)
-    var passwordCharacters = []
     if (confirmLower) {
       passwordCharacters = passwordCharacters.concat(lower)
     }
@@ -54,7 +53,6 @@ function generatePassword() {
     }
   
     // loop for randomizing characters
-    var randomPassword = ""
     for (var i = 0; i < confirmLength; i++) {
       randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
     }
